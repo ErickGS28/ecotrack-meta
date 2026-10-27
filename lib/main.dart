@@ -1,16 +1,12 @@
+// lib/main.dart
+// Etapa 5 — Arranca la variante B (provider) con la fuente de datos en memoria.
+//   flutter run
+
 import 'package:flutter/material.dart';
 
+import 'package:ecotrack_meta/datos/memoria_consumo_repository.dart';
+import 'package:ecotrack_meta/variantes/b_provider.dart';
+
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
-    );
-  }
+  runApp(AppProvider(repositorio: MemoriaConsumoRepository()));
 }
